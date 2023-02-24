@@ -1,4 +1,5 @@
 var esbuild = require("esbuild");
+var mode = process.argv[2];
 
 (async () => {
   try {
@@ -17,14 +18,18 @@ var esbuild = require("esbuild");
       },
     });
 
-    await ctx.watch();
-    console.log("watching...");
+    if (mode === "dev") {
+      await ctx.watch();
+      console.log("watching...");
 
-    let { host, port } = await ctx.serve({
-      servedir: "public",
-    });
+      let { host, port } = await ctx.serve({
+        servedir: "public",
+      });
 
-    console.log(`hosted at ${host}:${port}`);
+      console.log(`hosted at ${host}:${port}`);
+    } else {
+      console.log("Build successful.");
+    }
   } catch (error) {
     console.error(error);
   }

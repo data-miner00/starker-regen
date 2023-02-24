@@ -4,8 +4,9 @@
   "description": "A simple React template with F#",
   "main": "src/index.fs",
   "scripts": {
-    "dev": "dotnet tool restore && dotnet fable watch src --runFast node esbuild.config.js",
-    "build": "dotnet tool restore && dotnet fable src",
+    "restore": "dotnet tool restore",
+    "dev": "dotnet tool restore && dotnet fable watch src --runFast node esbuild.config.js dev",
+    "build": "dotnet tool restore && dotnet fable src --run node esbuild.condig.js prod",
     "clean": "dotnet fable clean src --yes",
     "watch:tw": "tailwindcss -i ./src/index.css -o ./public/dist/tailwind.css --watch"
   },
