@@ -1,0 +1,21 @@
+{
+  "name": "starker-regen",
+  "version": "1.0.0",
+  "description": "A simple React template with F#",
+  "main": "src/index.fs",
+  "scripts": {
+    "dev": "dotnet tool restore && dotnet fable watch src --runFast node esbuild.config.js",
+    "build": "dotnet tool restore && dotnet fable src",
+    "clean": "dotnet fable clean src --yes"
+  },
+  "keywords": [],
+  "author": "Shaun",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.17.10"
+  }
+}
