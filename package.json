@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "dotnet tool restore && dotnet fable watch src --runFast node esbuild.config.js",
     "build": "dotnet tool restore && dotnet fable src",
-    "clean": "dotnet fable clean src --yes"
+    "clean": "dotnet fable clean src --yes",
+    "watch:tw": "tailwindcss -i ./src/index.css -o ./public/dist/tailwind.css --watch"
   },
   "keywords": [],
   "author": "Shaun",
