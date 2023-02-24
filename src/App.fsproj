@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="core\IComponent.fs" />
     <Compile Include="utils\Extensions.fs" />
     <Compile Include="App.fs" />
     <Compile Include="index.fs" />
