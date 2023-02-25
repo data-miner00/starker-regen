@@ -1,4 +1,5 @@
 var esbuild = require("esbuild");
+var chalk = require("chalk");
 var mode = process.argv[2];
 
 (async () => {
@@ -18,19 +19,56 @@ var mode = process.argv[2];
       },
     });
 
+    var now = new Date();
+
     if (mode === "dev") {
+      console.log(
+        "%s [%s]: %s",
+        chalk.gray(now.toTimeString()),
+        chalk.bgBlue("INFO"),
+        "Launched esbuild in dev mode."
+      );
+
       await ctx.watch();
-      console.log("watching...");
+      console.log(
+        "%s [%s]: %s",
+        chalk.gray(now.toTimeString()),
+        chalk.bgGreen("SUCCESS"),
+        "Watch mode has enabled. Changes made will trigger a rebuild."
+      );
 
       let { host, port } = await ctx.serve({
         servedir: "public",
       });
 
-      console.log(`hosted at ${host}:${port}`);
+      console.log(
+        "%s [%s]: %s",
+        chalk.gray(now.toTimeString()),
+        chalk.bgBlue("INFO"),
+        "Serving files from " +
+          chalk.yellow("/public") +
+          " directory at " +
+          chalk.underline(`localhost:${port}`) +
+          "."
+      );
     } else {
-      console.log("Build successful.");
+      console.log(
+        "%s [%s]: %s",
+        chalk.gray(now.toTimeString()),
+        chalk.bgGreen("SUCCESS"),
+        "Build successful. Latest changes has been written to " +
+          chalk.yellow("/public/dist") +
+          " directory."
+      );
+      await ctx.dispose();
     }
   } catch (error) {
-    console.error(error);
+    console.log(
+      "%s [%s]: %s",
+      chalk.gray(now.toTimeString()),
+      chalk.bgRed("ERROR"),
+      `Something went wrong - ${error}`
+    );
+    await ctx.dispose();
   }
 })();
