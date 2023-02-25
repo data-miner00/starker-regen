@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <Compile Include="core\IComponent.fs" />
+    <Compile Include="components\Button.fs" />
     <Compile Include="utils\Extensions.fs" />
     <Compile Include="App.fs" />
     <Compile Include="index.fs" />
