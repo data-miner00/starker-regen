@@ -5,10 +5,11 @@
   "main": "src/index.fs",
   "scripts": {
     "restore": "dotnet tool restore",
-    "dev": "dotnet tool restore && dotnet fable watch src --runFast node esbuild.config.js dev",
+    "dev": "concurrently --kill-others \"pnpm watch:fb\" \"pnpm watch:tw\"",
     "build": "dotnet tool restore && dotnet fable src --run node esbuild.condig.js prod",
     "clean": "dotnet fable clean src --yes",
-    "watch:tw": "tailwindcss -i ./src/index.css -o ./public/dist/tailwind.css --watch"
+    "watch:tw": "tailwindcss -i ./src/index.css -o ./public/dist/tailwind.css --watch",
+    "watch:fb": "dotnet tool restore && dotnet fable watch src --runFast node esbuild.config.js dev"
   },
   "keywords": [],
   "author": "Shaun",
