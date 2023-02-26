@@ -1,1 +1,12 @@
+:root {
+  --primary: rgba(255, 255, 255, 0.25);
+}
 
+li.list-tick {
+  list-style-type: "\2713";
+  line-height: 2em;
+}
+
+li.list-tick::marker {
+  width: 30px;
+}

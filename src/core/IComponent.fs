@@ -3,7 +3,7 @@
 open Fable.React
 
 /// <summary>
-/// An interface that all React components must implement.
+/// An interface that all stateless React components can implement.
 /// </summary>
 type IComponent =
 

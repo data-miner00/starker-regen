@@ -6,8 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="components\Showcase.fs" />
+    <Compile Include="components\icons\Github.fs" />
     <Compile Include="core\IComponent.fs" />
+    <Compile Include="components\Header.fs" />
     <Compile Include="components\Button.fs" />
+    <Compile Include="pages\Landing.fs" />
     <Compile Include="utils\Extensions.fs" />
     <Compile Include="App.fs" />
     <Compile Include="index.fs" />
