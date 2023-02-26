@@ -10,3 +10,11 @@ li.list-tick {
 li.list-tick::marker {
   width: 30px;
 }
+
+#gradient-canvas {
+  filter: brightness(0.8) saturate(1.25);
+  --gradient-color-1: #6ec3f4;
+  --gradient-color-2: #3a3aff;
+  --gradient-color-3: #ff61ab;
+  --gradient-color-4: #e63946;
+}
