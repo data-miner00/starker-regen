@@ -54,14 +54,14 @@ pre[class*="language-"] {
 code[class*="language-"]::-moz-selection,
 code[class*="language-"] *::-moz-selection,
 pre[class*="language-"] *::-moz-selection {
-  background: hsl(230, 1%, 90%);
+  /* background: hsl(230, 1%, 90%); */
   color: inherit;
 }
 
 code[class*="language-"]::selection,
 code[class*="language-"] *::selection,
 pre[class*="language-"] *::selection {
-  background: hsl(230, 1%, 90%);
+  /* background: hsl(230, 1%, 90%); */
   color: inherit;
 }
 

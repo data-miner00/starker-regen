@@ -37,8 +37,10 @@ let Counter() =
           Counter.fs
         </button>
       </div>
-      <pre className="text-lg selection:bg-purple-500">
-        <code className="language-fsharp">{code}</code>
+      <pre className="text-lg">
+        <code className="language-fsharp selection:bg-violet-200/80">
+          {code}
+        </code>
       </pre>
     </div>
   );
