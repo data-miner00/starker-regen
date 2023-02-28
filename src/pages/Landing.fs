@@ -77,10 +77,11 @@ module Landing =
                                                     ]
                                                     prop.children [
                                                         Html.text "Embracing the joy with "
-                                                        Html.span [
+                                                        Html.a [
                                                             prop.className [
                                                                 "underline font-semibold"
                                                             ]
+                                                            prop.href "https://fsharp.org/"
                                                             prop.text "F#"
                                                         ]
                                                     ]
