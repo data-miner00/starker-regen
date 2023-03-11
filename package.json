@@ -6,8 +6,10 @@
   "scripts": {
     "restore": "dotnet tool restore",
     "dev": "concurrently --kill-others \"pnpm watch:fb\" \"pnpm watch:tw\"",
-    "build": "dotnet tool restore && dotnet fable src --run node esbuild.condig.js prod",
+    "build:fb": "dotnet tool restore && dotnet fable src --run node esbuild.config.js prod",
+    "build": "pnpm build:fb && pnpm build:tw",
     "clean": "dotnet fable clean src --yes",
+    "build:tw": "tailwindcss -i ./src/index.css -o ./public/dist/tailwind.css --minify",
     "watch:tw": "tailwindcss -i ./src/index.css -o ./public/dist/tailwind.css --watch",
     "watch:fb": "dotnet tool restore && dotnet fable watch src --runFast node esbuild.config.js dev"
   },
