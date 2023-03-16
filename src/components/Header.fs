@@ -1,7 +1,9 @@
 ﻿namespace App.Components
 
 open App.Core
+open App.Utils
 open Feliz
+open Feliz.Router
 open App.Components.Icons
 
 type Header() =
@@ -19,15 +21,46 @@ type Header() =
                         "items-center h-full"
                     ]
                     prop.children [
-                        Html.div [
+                        Html.a [
                             prop.className [
-                                "uppercase text-2xl font-semibold text-slate-700"
+                                "uppercase text-2xl font-semibold text-slate-700 block"
                             ]
+                            prop.onClick (fun x -> x.preventDefault(); Router.navigatePath "/")
+                            prop.href "/"
                             prop.text "Starker"
                         ]
 
                         Html.div [
+                            prop.className "flex"
                             prop.children [
+                                Html.div [
+                                    prop.className [
+                                        "flex gap-5 mr-6 text-gray-600 font-bold items-center"
+                                    ]
+                                    prop.children [
+                                        Html.a [
+                                            prop.className "block pointer hover:text-gray-500"
+                                            prop.onClick (fun x -> x.preventDefault(); Router.navigatePath "/#about")
+                                            prop.href "/#about"
+                                            prop.text "About"
+                                        ]
+
+                                        Html.a [
+                                            prop.className "block pointer hover:text-gray-500"
+                                            prop.href "https://fable.io/"
+                                            prop.target "_blank"
+                                            prop.text "Fable"
+                                        ]
+
+                                        Html.a [
+                                            prop.className "block pointer hover:text-gray-500"
+                                            prop.href "https://zaid-ajaj.github.io/Feliz/#/"
+                                            prop.target "_blank"
+                                            prop.text "Feliz"
+                                        ]
+                                    ]
+                                ]
+
                                 Github.Make()
                             ]
                         ]
