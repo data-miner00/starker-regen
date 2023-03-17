@@ -8,7 +8,6 @@
   <ItemGroup>
     <Compile Include="utils\Routing.fs" />
     <Compile Include="components\Showcase.fs" />
-    <Compile Include="components\icons\Github.fs" />
     <Compile Include="core\IComponent.fs" />
     <Compile Include="components\Header.fs" />
     <Compile Include="components\Button.fs" />

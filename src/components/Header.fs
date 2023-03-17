@@ -4,7 +4,12 @@ open App.Core
 open App.Utils
 open Feliz
 open Feliz.Router
-open App.Components.Icons
+
+
+module GitHub =
+    [<ReactComponent(import="Github", from="./icons/Github.jsx")>]
+    let Make () = React.imported()
+
 
 type Header() =
     interface IComponent with
@@ -61,7 +66,7 @@ type Header() =
                                     ]
                                 ]
 
-                                Github.Make()
+                                GitHub.Make()
                             ]
                         ]
                     ]
