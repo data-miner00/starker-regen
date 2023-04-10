@@ -10,6 +10,9 @@ module GitHub =
     [<ReactComponent(import="Github", from="./icons/Github.jsx")>]
     let Make () = React.imported()
 
+module Link = 
+    [<ReactComponent(import="Link", from="./icons/Link.jsx")>]
+    let Make() = React.imported()
 
 type Header() =
     interface IComponent with
@@ -40,7 +43,7 @@ type Header() =
                             prop.children [
                                 Html.div [
                                     prop.className [
-                                        "flex gap-5 mr-6 text-gray-600 font-bold items-center"
+                                        "flex gap-5 pr-4 mr-4 text-gray-600 items-center border-r border-solid border-gray-200"
                                     ]
                                     prop.children [
                                         Html.a [
@@ -51,22 +54,39 @@ type Header() =
                                         ]
 
                                         Html.a [
-                                            prop.className "block pointer hover:text-gray-500"
+                                            prop.className "block pointer hover:text-gray-500 flex items-center"
                                             prop.href "https://fable.io/"
                                             prop.target "_blank"
-                                            prop.text "Fable"
+                                            prop.children [
+                                                Html.span [
+                                                    prop.className "block mr-1"
+                                                    prop.text "Fable"
+                                                ]
+                                                Link.Make()
+                                            ]
                                         ]
 
                                         Html.a [
-                                            prop.className "block pointer hover:text-gray-500"
+                                            prop.className "block pointer hover:text-gray-500 flex items-center"
                                             prop.href "https://zaid-ajaj.github.io/Feliz/#/"
                                             prop.target "_blank"
-                                            prop.text "Feliz"
+                                            prop.children [
+                                                Html.span [
+                                                    prop.className "block mr-1"
+                                                    prop.text "Feliz"
+                                                ]
+                                                Link.Make()
+                                            ]
                                         ]
                                     ]
                                 ]
 
-                                GitHub.Make()
+                                Html.div [
+                                    prop.className "text-gray-600"
+                                    prop.children [
+                                        GitHub.Make()
+                                    ]
+                                ]
                             ]
                         ]
                     ]
