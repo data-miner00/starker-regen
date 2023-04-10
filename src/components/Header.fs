@@ -18,21 +18,13 @@ type Header() =
     interface IComponent with
         [<ReactComponent>]
         member this.make() = Html.div [
-            prop.className [ 
-                "border-b border-solid border-gray-200"
-                "w-full h-16"
-            ]
+            prop.className "border-b border-solid border-gray-200 w-full h-16"
             prop.children [
                 Html.header [
-                    prop.className [
-                        "flex justify-between max-w-screen-xl mx-auto"
-                        "items-center h-full"
-                    ]
+                    prop.className "flex justify-between max-w-screen-xl mx-auto items-center h-full"
                     prop.children [
                         Html.a [
-                            prop.className [
-                                "uppercase text-2xl font-semibold text-slate-700 block"
-                            ]
+                            prop.className "uppercase text-2xl font-semibold text-slate-700 block"
                             prop.onClick (fun x -> x.preventDefault(); Router.navigatePath "/")
                             prop.href "/"
                             prop.text "Starker"
@@ -43,7 +35,8 @@ type Header() =
                             prop.children [
                                 Html.div [
                                     prop.className [
-                                        "flex gap-5 pr-4 mr-4 text-gray-600 items-center border-r border-solid border-gray-200"
+                                        "flex gap-5 pr-4 mr-4 text-gray-600 items-center"
+                                        "border-r border-solid border-gray-200"
                                     ]
                                     prop.children [
                                         Html.a [

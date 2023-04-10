@@ -17,27 +17,19 @@ module Landing =
                 Header().make()
 
                 Html.div [
-                    prop.className [
-                        "h-[calc(100vh-64px)] w-full relative"
-                    ]
+                    prop.className "h-[calc(100vh-64px)] w-full relative"
                     prop.children [
                         Html.div [
-                            prop.className [
-                                "absolute w-full h-full -z-10 xl:p-4"
-                            ]
+                            prop.className "absolute w-full h-full -z-10 xl:p-4"
                             prop.children [
                                 Html.div [
                                     prop.className "relative h-full"
                                     prop.children [
                                         Html.div [
-                                            prop.className [
-                                                "absolute rounded-xl bg-slate-700 h-full w-full"
-                                            ]
+                                            prop.className "absolute rounded-xl bg-slate-700 h-full w-full"
                                         ]
                                         Html.canvas [
-                                            prop.className [
-                                                "absolute rounded-xl block h-full w-full"
-                                            ]
+                                            prop.className "absolute rounded-xl block h-full w-full"
                                             prop.id "gradient-canvas"
                                         ]
                                     ]
@@ -45,10 +37,7 @@ module Landing =
                             ]
                         ]
                         Html.div [
-                            prop.className [
-                                "flex"
-                                "justify-center items-center h-full"
-                            ]
+                            prop.className "flex justify-center items-center h-full"
                             prop.style [
                                 style.backgroundImage "radial-gradient(circle,var(--primary),var(--primary) 1.5px,transparent 1.5px,transparent)"
                                 style.backgroundSize "2.5rem 2.5rem"
@@ -72,15 +61,11 @@ module Landing =
                                                 ]
 
                                                 Html.p [
-                                                    prop.className [
-                                                        "text-2xl font-semibold text-gray-200"
-                                                    ]
+                                                    prop.className "text-2xl font-semibold text-gray-200"
                                                     prop.children [
                                                         Html.text "Embracing the joy with "
                                                         Html.a [
-                                                            prop.className [
-                                                                "underline font-semibold"
-                                                            ]
+                                                            prop.className "underline font-semibold"
                                                             prop.href "https://fsharp.org/"
                                                             prop.text "F#"
                                                         ]
@@ -88,37 +73,27 @@ module Landing =
                                                 ]
 
                                                 Html.ul [
-                                                    prop.className [
-                                                        "pl-5 opacity-80"
-                                                    ]
+                                                    prop.className "pl-5 opacity-80"
                                                     prop.children [
                                                         Html.li [
-                                                            prop.className [
-                                                                "list-tick text-2xl pl-2"
-                                                            ]
+                                                            prop.className "list-tick text-2xl pl-2"
                                                             prop.text "Succinct Syntax with Type-safety enforced."
                                                         ]
 
                                                         Html.li [
-                                                            prop.className [
-                                                                "list-tick text-2xl pl-2"
-                                                            ]
+                                                            prop.className "list-tick text-2xl pl-2"
                                                             prop.text "Styling with TailwindCSS."
                                                         ]
 
                                                         Html.li [
-                                                            prop.className [
-                                                                "list-tick text-2xl pl-2"
-                                                            ]
+                                                            prop.className "list-tick text-2xl pl-2"
                                                             prop.text "Blazing fast build process with esbuild."
                                                         ]
                                                     ]
                                                 ]
 
                                                 Html.div [
-                                                    prop.className [
-                                                        "mt-4 flex gap-2"
-                                                    ]
+                                                    prop.className "mt-4 flex gap-2"
                                                     prop.children [
                                                         Html.a [
                                                             prop.className [
