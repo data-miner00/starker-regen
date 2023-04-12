@@ -17,6 +17,6 @@ module App =
                 match currentUrl with
                 | [ ] -> Landing.Make()
                 | [ "about" ] -> About.Make()
-                | _ -> Html.h1 "Not found"
+                | _ -> NotFound.Make() 
             ]
         ]
