@@ -50,6 +50,7 @@ type Header() =
                                             prop.className "block pointer hover:text-gray-500 flex items-center"
                                             prop.href "https://fable.io/"
                                             prop.target "_blank"
+                                            prop.rel "noopener noreferrer"
                                             prop.children [
                                                 Html.span [
                                                     prop.className "block mr-1"
@@ -63,6 +64,7 @@ type Header() =
                                             prop.className "block pointer hover:text-gray-500 flex items-center"
                                             prop.href "https://zaid-ajaj.github.io/Feliz/#/"
                                             prop.target "_blank"
+                                            prop.rel "noopener noreferrer"
                                             prop.children [
                                                 Html.span [
                                                     prop.className "block mr-1"
@@ -74,8 +76,11 @@ type Header() =
                                     ]
                                 ]
 
-                                Html.div [
-                                    prop.className "text-gray-600"
+                                Html.a [
+                                    prop.className "text-gray-600 block"
+                                    prop.href "https://github.com/data-miner00/starker-regen"
+                                    prop.target "_blank"
+                                    prop.rel "noopener noreferrer"
                                     prop.children [
                                         GitHub.Make()
                                     ]
