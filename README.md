@@ -63,14 +63,14 @@
 
 ![Template screenshot](/public/assets/screenshot.png)
 
-An extremely opinionated template for building React applications with F#. This template allows user to focus on the application itself rather than all these low-level configuration stuffs.
+An extremely opinionated template for building React applications with F#. This template allows users to focus on the application itself rather than all these low-level configuration stuff.
 
 Incentives:
 
 - Wanted to try out F#, Fable and Feliz
-- Buitl this React template so I can use for other projects.
+- Buitl this React template so I can use it for other projects.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people who have contributed to expanding this template!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -92,7 +92,7 @@ The technologies and tools used within this template.
 
 ### Design
 
-The template uses **Feliz** and **Fable** to transpile the F# source files into plain JavaScript files that is later bundled with **esbuild** into the `public/dist` folder. **Tailwind CSS** will scan for classes used in the F# source file with its JIT compilation feature.
+The template uses **Feliz** and **Fable** to transpile the F# source files into plain JavaScript files that are later bundled with **esbuild** into the `public/dist` folder. **Tailwind CSS** will scan for classes used in the F# source file with its JIT compilation feature.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -102,7 +102,7 @@ The template uses **Feliz** and **Fable** to transpile the F# source files into 
 
 ### Prerequisites
 
-The list of tools that is used when development.
+The list of tools that are used when development.
 
 - npm
   ```sh
@@ -172,7 +172,7 @@ See the [open issues](https://github.com/data-miner00/starker-regen/issues) for 
 
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what makes the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
