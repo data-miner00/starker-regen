@@ -21,7 +21,7 @@ type Header() =
             prop.className "border-b border-solid border-gray-200 w-full h-16"
             prop.children [
                 Html.header [
-                    prop.className "flex justify-between max-w-screen-xl mx-auto items-center h-full"
+                    prop.className "flex justify-between px-4 lg:px-0 lg:max-w-screen-xl mx-auto items-center h-full"
                     prop.children [
                         Html.a [
                             prop.className "uppercase text-2xl font-semibold text-slate-700 block"

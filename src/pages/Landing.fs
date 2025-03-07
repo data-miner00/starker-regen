@@ -17,7 +17,7 @@ module Landing =
                 Header().make()
 
                 Html.div [
-                    prop.className "h-[calc(100vh-64px)] w-full relative"
+                    prop.className "lg:h-[calc(100vh-64px)] w-full relative"
                     prop.children [
                         Html.div [
                             prop.className "absolute w-full h-full -z-10 xl:p-4"
@@ -26,10 +26,10 @@ module Landing =
                                     prop.className "relative h-full"
                                     prop.children [
                                         Html.div [
-                                            prop.className "absolute rounded-xl bg-slate-700 h-full w-full"
+                                            prop.className "absolute lg:rounded-xl bg-slate-700 h-full w-full"
                                         ]
                                         Html.canvas [
-                                            prop.className "absolute rounded-xl block h-full w-full"
+                                            prop.className "absolute lg:rounded-xl block h-full w-full"
                                             prop.id "gradient-canvas"
                                         ]
                                     ]
@@ -37,7 +37,7 @@ module Landing =
                             ]
                         ]
                         Html.div [
-                            prop.className "flex justify-center items-center h-full"
+                            prop.className "flex justify-center items-center lg:h-full"
                             prop.style [
                                 style.backgroundImage "radial-gradient(circle,var(--primary),var(--primary) 1.5px,transparent 1.5px,transparent)"
                                 style.backgroundSize "2.5rem 2.5rem"
@@ -46,7 +46,7 @@ module Landing =
                             prop.children [
                                 Html.div [
                                     prop.className [
-                                        "flex max-w-6xl mx-auto px-2 md:px-8 py-12 flex-1 gap-4 text-white"
+                                        "flex flex-col lg:flex-row lg:max-w-6xl mx-auto px-2 md:px-8 py-12 flex-1 gap-12 xl:gap-4 text-white"
                                     ]
                                     prop.children [
                                         Html.div [
