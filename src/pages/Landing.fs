@@ -97,14 +97,16 @@ module Landing =
                                                     prop.children [
                                                         Html.a [
                                                             prop.className [
-                                                                "block text-2xl font-bold rounded-lg px-6 py-3 bg-black/10 hover:bg-black/20 focus:bg-black/25 backdrop-filter backdrop-blur-sm"
+                                                                "block text-2xl font-bold rounded-lg px-6 py-3 bg-black/10 hover:bg-black/20 focus:bg-black/25 backdrop-filter backdrop-blur-sm cursor-pointer"
                                                             ]
+                                                            prop.href "#get-started"
                                                             prop.text "Get Started"
                                                         ]
                                                         Html.a [
                                                             prop.className [
-                                                                "block text-2xl font-semibold px-6 py-3 hover:bg-white/10 rounded-lg"
+                                                                "block text-2xl font-semibold px-6 py-3 hover:bg-white/10 rounded-lg cursor-pointer"
                                                             ]
+                                                            prop.href "#about"
                                                             prop.text "Read More"
                                                         ]
                                                     ]

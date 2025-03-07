@@ -7,7 +7,6 @@ export function Link() {
       width="14"
       height="14"
       fill="currentColor"
-      class="bi bi-box-arrow-up-right"
       viewBox="0 0 16 16"
     >
       <path
